@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Play Human Expenditure Program Online — Browser Game with Multiple Endings</title>
+  <meta name="description" content="Play Human Expenditure Program online in your browser — a horror-tinged simulation with choices and multiple endings. Free to try, no downloads required.">
+  <link rel="canonical" href="https://humanexpenditureprogram.net">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Human Expenditure Program">
+  <meta property="og:title" content="Play Human Expenditure Program Online">
+  <meta property="og:description" content="A browser-based moral choice game with multiple endings. Free to try, no downloads.">
+  <meta property="og:url" content="https://humanexpenditureprogram.net">
+  <meta property="og:image" content="https://github.com/qsyhxw/lovemoneygame.cc/blob/main/cover-1920x1080.png?raw=true">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1080">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Play Human Expenditure Program Online">
+  <meta name="twitter:description" content="Choices with consequences. Multiple endings. Play free in your browser.">
+  <meta name="twitter:image" content="https://github.com/qsyhxw/lovemoneygame.cc/blob/main/cover-1920x1080.png?raw=true">
+  <meta name="twitter:image:alt" content="Human Expenditure Program — cover artwork">
+
+  <!-- Theme / Icons -->
+  <meta name="theme-color" content="#0b0f19">
+  <link rel="icon" href="/favicon.ico">
+
+  <!-- Preconnect: iframe host + image host (GitHub raw) -->
+  <link rel="preconnect" href="https://humanexpenditureprogram.io" crossorigin>
+  <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
+  <link rel="preconnect" href="https://github.com" crossorigin>
+
+  <!-- Preload hero image for better LCP -->
+  <link rel="preload" as="image" href="https://github.com/qsyhxw/lovemoneygame.cc/blob/main/cover-1920x1080.png?raw=true" imagesizes="(min-width:1024px) 50vw, 100vw">
+
+  <!-- Tailwind CDN (no external fonts) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root { color-scheme: light dark; }
+    .focus-ring:focus-visible { outline: 2px solid #10b981; outline-offset: 2px; }
+    @media (prefers-reduced-motion: reduce) { .transition-all, .duration-300 { transition: none !important; } }
+
+    /* Fullscreen styles & control button */
+    #player-container:fullscreen { border-radius: 0; }
+    #player-container:fullscreen iframe { width: 100vw; height: 100vh; }
+    .fs-btn { width:44px; height:44px; border-radius:9999px; display:grid; place-items:center;
+              background:rgba(255,255,255,.9); color:#6d28d9; box-shadow:0 6px 20px rgba(0,0,0,.35); }
+    .fs-btn:hover { background:#ffffff; }
+    .fs-icon { width:22px; height:22px; }
+    .hidden { display:none; }
+  </style>
+
+  <!-- ANALYTICS_SNIPPET: Add your analytics script here -->
+  <!-- ADSENSE_SNIPPET: Add your AdSense script here -->
+</head>
+<body class="bg-[#0b0f19] text-white antialiased">
+  <!-- Skip Link -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:ring-2 focus:ring-emerald-500 focus:outline-none absolute left-2 top-2 z-50 bg-emerald-600 text-white px-3 py-2 rounded">Skip to content</a>
+
+  <!-- Header / Sticky Nav -->
+  <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-black/40 bg-black/60 border-b border-white/10">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
+      <a href="#" aria-current="page" class="font-semibold tracking-wide focus-ring">Human Expenditure Program</a>
+      <ul class="flex items-center gap-4 text-sm">
+        <li><a class="focus-ring hover:underline" href="#play" aria-label="Jump to Play section">Play</a></li>
+        <li><a class="focus-ring hover:underline" href="#features" aria-label="Jump to Features section">Features</a></li>
+        <li><a class="focus-ring hover:underline" href="#how-to" aria-label="Jump to How to Play section">How&nbsp;to</a></li>
+        <li><a class="focus-ring hover:underline" href="#endings" aria-label="Jump to Endings and Choices section">Endings</a></li>
+        <li><a class="focus-ring hover:underline" href="#faq" aria-label="Jump to FAQ section">FAQ</a></li>
+        <li><a class="focus-ring hover:underline" href="#about" aria-label="Jump to About and Contact section">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="relative">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20 grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
+            Play Human Expenditure Program Online
+          </h1>
+          <p class="mt-4 text-lg text-slate-200">
+            A browser-based moral choice game with multiple endings. Free to try, no downloads.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#play" class="focus-ring inline-flex items-center justify-center px-5 py-3 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-black font-semibold min-h-[44px]" aria-label="Scroll to Play section to start playing Human Expenditure Program">
+              Play in your browser
+            </a>
+            <a href="https://shroomychrist-studios.itch.io/human-expenditure-program" target="_blank" rel="noopener noreferrer" class="focus-ring inline-flex items-center justify-center px-5 py-3 rounded-lg border border-emerald-500 text-emerald-400 hover:bg-emerald-500/10 min-h-[44px]" aria-label="Open the official itch.io page in a new tab">
+              Visit the official itch.io page
+            </a>
+          </div>
+          <p class="mt-3 text-sm text-slate-400">Powered by trusted sources, linked to the official itch.io page.</p>
+        </div>
+
+        <!-- Game image -->
+        <div class="rounded-2xl overflow-hidden ring-1 ring-white/10 aspect-[16/10]">
+          <img
+            src="https://github.com/qsyhxw/lovemoneygame.cc/blob/main/cover-1920x1080.png?raw=true"
+            width="1920" height="1080"
+            fetchpriority="high" decoding="async" referrerpolicy="no-referrer"
+            alt="Human Expenditure Program — cover artwork"
+            class="w-full h-full object-cover">
+        </div>
+      </div>
+    </section>
+
+    <!-- Play (fullscreen-friendly container, lazy iframe + poster image) -->
+    <section id="play" class="bg-[#0a0e17]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <h2 class="text-2xl md:text-3xl font-bold">Play Now</h2>
+        <p class="mt-2 text-slate-300">Click to load the game. No downloads required.</p>
+
+        <!-- Dynamic height: 100svh minus header (3.5rem) and local spacing (~7rem) -->
+        <div id="player-container"
+             class="mt-4 relative w-full h-[calc(100svh-3.5rem-7rem)] md:h-[calc(100vh-3.5rem-7rem)] min-h-[70vh] bg-black/60 rounded-2xl ring-1 ring-white/10 overflow-hidden"
+             aria-label="Game player area">
+
+          <!-- Poster image (shown before iframe loads) -->
+          <img id="poster"
+               src="https://github.com/qsyhxw/lovemoneygame.cc/blob/main/cover-1920x1080.png?raw=true"
+               width="1920" height="1080"
+               alt="Human Expenditure Program gameplay poster"
+               referrerpolicy="no-referrer"
+               class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none">
+
+          <!-- Click-to-load overlay -->
+          <button id="load-iframe"
+                  class="absolute inset-0 w-full h-full grid place-items-center bg-black/50 text-white cursor-pointer focus-ring">
+            <span class="px-5 py-3 rounded-lg bg-emerald-500 text-black font-semibold min-h-[44px]">Click to Play</span>
+          </button>
+
+          <!-- Controls: Fullscreen + Fallback link -->
+          <div class="absolute bottom-3 right-3 flex items-center gap-3">
+            <button id="fs-btn" class="fs-btn focus-ring" aria-label="Enter fullscreen" aria-pressed="false" title="Fullscreen (F)">
+              <!-- enter fullscreen -->
+              <svg id="fs-enter" class="fs-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M9 3H3v6h2V5h4V3zm12 0h-6v2h4v4h2V3zM5 13H3v8h8v-2H5v-6zm16 0h-2v6h-6v2h8v-8z"/>
+              </svg>
+              <!-- exit fullscreen -->
+              <svg id="fs-exit" class="fs-icon hidden" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M9 5H5v4H3V3h6v2zm12 4h-2V5h-4V3h6v6zM5 19h4v2H3v-6h2v4zm12 0h4v-4h2v6h-6v-2z"/>
+              </svg>
+            </button>
+            <a class="text-sm underline focus-ring"
+               target="_blank" rel="noopener noreferrer"
+               href="https://humanexpenditureprogram.io/human-expenditure-program.embed"
+               aria-label="Open the game in a new tab as a fallback">Open</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Bar (below the fold) -->
+    <section class="py-8 bg-emerald-500/10 border-y border-emerald-500/20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-4">
+        <p class="text-slate-200">Ready to make a choice?</p>
+        <a href="#play" class="focus-ring inline-flex items-center justify-center px-5 py-3 rounded-lg bg-emerald-500 text-black font-semibold min-h-[44px]">Play in your browser</a>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-12">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold">What Makes It Different</h2>
+        <ul class="mt-6 grid md:grid-cols-3 gap-6">
+          <li class="p-5 rounded-xl bg-white/5 ring-1 ring-white/10">
+            <h3 class="font-semibold">Choices with lasting consequences</h3>
+            <p class="mt-2 text-slate-300">Your actions matter. The program remembers.</p>
+          </li>
+          <li class="p-5 rounded-xl bg-white/5 ring-1 ring-white/10">
+            <h3 class="font-semibold">Multiple endings to discover</h3>
+            <p class="mt-2 text-slate-300">Replay to explore different outcomes.</p>
+          </li>
+          <li class="p-5 rounded-xl bg-white/5 ring-1 ring-white/10">
+            <h3 class="font-semibold">Free to try, no downloads</h3>
+            <p class="mt-2 text-slate-300">A fast, mobile-friendly browser game.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- How to Play -->
+    <section id="how-to" class="py-12">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold">How to Play (3 Steps)</h2>
+        <ol class="mt-6 grid md:grid-cols-3 gap-6 list-decimal list-inside">
+          <li class="p-5 rounded-xl bg-white/5 ring-1 ring-white/10">Click “Play” to load the game</li>
+          <li class="p-5 rounded-xl bg-white/5 ring-1 ring-white/10">Manage Harvey’s needs and make choices</li>
+          <li class="p-5 rounded-xl bg-white/5 ring-1 ring-white/10">Experiment to unlock different endings</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Endings & Choices (SEO long-tail section) -->
+    <section id="endings" class="py-12 bg-[#0a0e17]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold">Endings &amp; Choices Explained</h2>
+        <p class="mt-3 text-slate-300">Your decisions shape outcomes. Be kind—or don’t. The program remembers.</p>
+      </div>
+    </section>
+
+    <!-- ADSENSE_SLOT_1: below-the-fold placement -->
+    <section class="py-6" aria-label="Sponsored">
+      <!-- Google AdSense code here -->
+    </section>
+
+    <!-- FAQ (Expanded: 10 Q&A, must match JSON-LD exactly) -->
+    <section id="faq" class="py-12">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold">FAQ</h2>
+        <div class="mt-6 grid md:grid-cols-2 gap-6">
+          <details class="rounded-xl bg-white/5 ring-1 ring-white/10 p-5">
+            <summary class="font-semibold cursor-pointer focus-ring">What type of game is this?</summary>
+            <p class="mt-2 text-slate-300">A horror-tinged browser simulation about choices and consequences.</p>
+          </details>
+
+          <details class="rounded-xl bg-white/5 ring-1 ring-white/10 p-5">
+            <summary class="font-semibold cursor-pointer focus-ring">Can I play it for free?</summary>
+            <p class="mt-2 text-slate-300">Yes. You can play in your browser with no downloads.</p>
+          </details>
+
+          <details class="rounded-xl bg-white/5 ring-1 ring-white/10 p-5">
+            <summary class="font-semibold cursor-pointer focus-ring">Does it have multiple endings?</summary>
+            <p class="mt-2 text-slate-300">Yes. Your choices lead to different endings.</p>
+          </details>
+
+          <details class="rounded-xl bg-white/5 ring-1 ring-white/10 p-5">
+            <summary class="font-semibold cursor-pointer focus-ring">Is there an official download?</summary>
+            <p class="mt-2 text-slate-300">Yes. Visit the official itch.io page for downloads.</p>
+          </details>
+
+          <details class="rounded-xl bg-white/5 ring-1 ring-white/10 p-5">
+            <summary class="font-semibold cursor-pointer focus-ring">Who created the game?</summary>
+            <p class="mt-2 text-slate-300">SHROOMYCHRIST is the original creator.</p>
+          </details>
+
+          <details class="rounded-xl bg-white/5 ring-1 ring-white/10 p-5">
+            <summary class="font-semibold cursor-pointer focus-ring">Does it save progress?</summary>
+            <p class="mt-2 text-slate-300">The web version is designed for short sessions; progress may not persist between reloads.</p>
+          </details>
+
+          <details class="rounded-xl bg-white/5 ring-1 ring-white/10 p-5">
+            <summary class="font-semibold cursor-pointer focus-ring">How do I enter fullscreen?</summary>
+            <p class="mt-2 text-slate-300">Click the fullscreen button, double-click the player, or press F.</p>
+          </details>
+
+          <details class="rounded-xl bg-white/5 ring-1 ring-white/10 p-5">
+            <summary class="font-semibold cursor-pointer focus-ring">Does it work on mobile?</summary>
+            <p class="mt-2 text-slate-300">Yes. It runs in modern mobile browsers; rotate to landscape for the best view.</p>
+          </details>
+
+          <details class="rounded-xl bg-white/5 ring-1 ring-white/10 p-5">
+            <summary class="font-semibold cursor-pointer focus-ring">Is it safe and legal to play here?</summary>
+            <p class="mt-2 text-slate-300">This is a non-commercial fan site that links to trusted sources.</p>
+          </details>
+
+          <details class="rounded-xl bg-white/5 ring-1 ring-white/10 p-5 md:col-span-2">
+            <summary class="font-semibold cursor-pointer focus-ring">Why is the game not full screen by default?</summary>
+            <p class="mt-2 text-slate-300">To keep pages fast and stable; click fullscreen for an immersive view.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADSENSE_SLOT_2: after FAQ -->
+    <section class="py-6" aria-label="Sponsored">
+      <!-- Google AdSense code here -->
+    </section>
+
+    <!-- About / Contact -->
+    <section id="about" class="py-12 bg-[#0a0e17]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold">About &amp; Contact</h2>
+        <p class="mt-3 text-slate-300">This is a non-commercial fan site for discovery and fair use linking.</p>
+        <ul class="mt-4 space-y-1 text-slate-300">
+          <li>Email: <a class="underline focus-ring" href="mailto:qsyhxw@gmail.com">qsyhxw@gmail.com</a></li>
+          <li>Official page: <a class="underline focus-ring" target="_blank" rel="noopener noreferrer" href="https://shroomychrist-studios.itch.io/human-expenditure-program">itch.io (official)</a></li>
+        </ul>
+        <p class="mt-6 text-xs text-slate-400">Rated 13+. Non-commercial fan site.</p>
+        <p class="text-xs text-slate-500 mt-2">Last updated: <time datetime="2025-09-17">Sep 17, 2025</time></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sticky CTA for mobile -->
+  <div class="md:hidden fixed bottom-3 inset-x-3 z-40">
+    <div class="rounded-xl bg-emerald-500 text-black shadow-lg ring-1 ring-emerald-400/40 px-4 py-3 flex items-center justify-between">
+      <span class="font-semibold">Play Human Expenditure Program</span>
+      <a href="#play" class="focus-ring px-3 py-2 rounded-lg bg-black/10">Play</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-wrap items-center justify-between gap-4">
+      <p class="text-slate-300">© <span id="year"></span> Human Expenditure Program</p>
+      <div class="flex items-center gap-4">
+        <a class="underline focus-ring" href="/privacy.html" aria-label="Privacy Policy link">Privacy</a>
+        <a class="underline focus-ring" href="/terms.html" aria-label="Terms of Use link">Terms</a>
+        <a href="#play" class="focus-ring inline-flex items-center justify-center px-4 py-2 rounded-lg bg-emerald-500 text-black font-semibold min-h-[44px]">Play now</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Human Expenditure Program",
+    "url": "https://humanexpenditureprogram.net",
+    "email": "qsyhxw@gmail.com",
+    "sameAs": [
+      "https://shroomychrist-studios.itch.io/human-expenditure-program",
+      "https://humanexpenditureprogram.io/"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: VideoGame -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Human Expenditure Program",
+    "url": "https://humanexpenditureprogram.net",
+    "inLanguage": "en-US",
+    "genre": ["Horror", "Simulation", "Browser game"],
+    "applicationCategory": "Game",
+    "operatingSystem": "Web",
+    "isAccessibleForFree": true,
+    "author": { "@type": "Person", "name": "SHROOMYCHRIST" },
+    "sameAs": [
+      "https://shroomychrist-studios.itch.io/human-expenditure-program",
+      "https://humanexpenditureprogram.io/"
+    ],
+    "description": "Play Human Expenditure Program online in your browser — a horror-tinged simulation with choices and multiple endings."
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage (MUST MATCH VISIBLE TEXT EXACTLY) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What type of game is this?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A horror-tinged browser simulation about choices and consequences." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I play it for free?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can play in your browser with no downloads." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it have multiple endings?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Your choices lead to different endings." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there an official download?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Visit the official itch.io page for downloads." }
+      },
+      {
+        "@type": "Question",
+        "name": "Who created the game?",
+        "acceptedAnswer": { "@type": "Answer", "text": "SHROOMYCHRIST is the original creator." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it save progress?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The web version is designed for short sessions; progress may not persist between reloads." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I enter fullscreen?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Click the fullscreen button, double-click the player, or press F." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it work on mobile?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. It runs in modern mobile browsers; rotate to landscape for the best view." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it safe and legal to play here?",
+        "acceptedAnswer": { "@type": "Answer", "text": "This is a non-commercial fan site that links to trusted sources." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is the game not full screen by default?",
+        "acceptedAnswer": { "@type": "Answer", "text": "To keep pages fast and stable; click fullscreen for an immersive view." }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Minimal JS: lazy-insert iframe on click; fullscreen; warm-up; year -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+
+      const btn = document.getElementById('load-iframe');
+      const fsBtn = document.getElementById('fs-btn');
+      const iconEnter = document.getElementById('fs-enter');
+      const iconExit  = document.getElementById('fs-exit');
+      const container = document.getElementById('player-container');
+
+      const SRC = 'https://humanexpenditureprogram.io/human-expenditure-program.embed';
+
+      function loadIframe() {
+        if (!container || container.querySelector('iframe')) return;
+        const iframe = document.createElement('iframe');
+        iframe.src = SRC;
+        iframe.title = 'Human Expenditure Program game';
+        iframe.loading = 'lazy';
+        iframe.referrerPolicy = 'no-referrer';
+        iframe.allowFullscreen = true;
+        iframe.setAttribute('allow', 'fullscreen; autoplay; clipboard-write; gamepad; xr-spatial-tracking');
+        iframe.setAttribute('aria-label', 'Embedded game frame for Human Expenditure Program');
+        iframe.className = 'absolute inset-0 w-full h-full border-0';
+        container.appendChild(iframe);
+
+        // Remove overlay and poster after loading
+        if (btn) btn.remove();
+        const poster = document.getElementById('poster');
+        if (poster) poster.remove();
+      }
+      if (btn) btn.addEventListener('click', loadIframe);
+
+      // Fullscreen toggle
+      function toggleFullscreen() {
+        const target = container.querySelector('iframe') || container; // prefer iframe
+        if (!document.fullscreenElement) {
+          const req = target.requestFullscreen || target.webkitRequestFullscreen || target.msRequestFullscreen;
+          if (req) req.call(target, { navigationUI: 'hide' });
+        } else {
+          const ex = document.exitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen;
+          if (ex) ex.call(document);
+        }
+      }
+      function syncFsState() {
+        const inFs = !!document.fullscreenElement;
+        fsBtn?.setAttribute('aria-pressed', inFs ? 'true' : 'false');
+        iconEnter?.classList.toggle('hidden', inFs);
+        iconExit?.classList.toggle('hidden', !inFs);
+      }
+      fsBtn?.addEventListener('click', toggleFullscreen);
+      container?.addEventListener('dblclick', toggleFullscreen);
+      document.addEventListener('keydown', (e) => { if (e.key.toLowerCase() === 'f') toggleFullscreen(); });
+      document.addEventListener('fullscreenchange', syncFsState);
+      syncFsState();
+
+      // Warm-up preconnect on interaction (improves first play)
+      const warmTargets = ["https://humanexpenditureprogram.io", "https://raw.githubusercontent.com"];
+      function addPreconnect(href){
+        if (document.querySelector(`link[rel="preconnect"][href="${href}"]`)) return;
+        const l = document.createElement('link');
+        l.rel = 'preconnect'; l.href = href; l.crossOrigin = 'anonymous';
+        document.head.appendChild(l);
+      }
+      ['load-iframe','fs-btn','player-container'].forEach(id=>{
+        const el = document.getElementById(id);
+        ['pointerenter','touchstart'].forEach(evt=>{
+          el?.addEventListener(evt, ()=> warmTargets.forEach(addPreconnect), { once:true, passive:true });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
