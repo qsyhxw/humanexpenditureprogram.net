@@ -30,7 +30,12 @@
   <!-- Theme / Icons -->
   <meta name="theme-color" content="#0b0f19">
   <link rel="icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/images/logo-512.png" sizes="512x512">
+  <!-- New: use your square logo as site/app icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo-512.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/logo-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo-512.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="/images/logo-512.png">
+  <link rel="manifest" href="/site.webmanifest">
 
   <!-- Preconnect: iframe host -->
   <link rel="preconnect" href="https://humanexpenditureprogram.io" crossorigin>
@@ -57,13 +62,10 @@
     /* Ad placeholder to prevent CLS */
     .ad-slot{min-height:280px; display:block}
     @media(min-width:768px){.ad-slot{min-height:250px}}
-
-    /* Optional: slightly brighter body text on dark bg for a11y slack */
-    /* .text-slate-300{color:#cbd5e1} */
   </style>
 
-  <!-- ANALYTICS_SNIPPET: Add your analytics script here -->
-  <!-- ADSENSE_SNIPPET: Add your AdSense script here -->
+  <!-- ANALYTICS_SNIPPET -->
+  <!-- ADSENSE_SNIPPET -->
 </head>
 <body class="bg-[#0b0f19] text-white antialiased">
   <!-- Skip Link -->
@@ -72,7 +74,12 @@
   <!-- Header / Sticky Nav -->
   <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-black/40 bg-black/60 border-b border-white/10">
     <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
-      <a href="#" aria-current="page" class="font-semibold tracking-wide focus-ring">Human Expenditure Program</a>
+      <!-- Updated: brand with inline logo -->
+      <a href="#" aria-current="page" class="focus-ring flex items-center gap-2">
+        <img src="/images/logo-512.png" width="28" height="28" alt="Human Expenditure Program logo"
+             class="rounded-md ring-1 ring-white/15 bg-black/20">
+        <span class="font-semibold tracking-wide">Human Expenditure Program</span>
+      </a>
       <ul class="flex items-center gap-4 text-sm">
         <li><a class="focus-ring hover:underline" href="#play" aria-label="Jump to Play section">Play</a></li>
         <li><a class="focus-ring hover:underline" href="#features" aria-label="Jump to Features section">Features</a></li>
@@ -277,15 +284,15 @@
         </div>
 
         <div class="mt-6 p-5 rounded-xl bg-emerald-500/10 ring-1 ring-emerald-500/20">
-          <h3 class="font-semibold">Tips (spoiler-light)</h3>
-          <ul class="mt-2 list-disc list-inside text-slate-200 space-y-1">
-            <li>Use Fullscreen for better visibility (button, double-click, or press F).</li>
-            <li>Short sessions are fine; treat early runs as scouting.</li>
-            <li>When in doubt, try the opposite of what “feels safe.”</li>
-          </ul>
-        </div>
+      <h3 class="font-semibold">Tips (spoiler-light)</h3>
+      <ul class="mt-2 list-disc list-inside text-slate-200 space-y-1">
+        <li>Use Fullscreen for better visibility (button, double-click, or press F).</li>
+        <li>Short sessions are fine; treat early runs as scouting.</li>
+        <li>When in doubt, try the opposite of what “feels safe.”</li>
+      </ul>
+    </div>
 
-        <!-- Further reading internal links (land later pages here) -->
+        <!-- Further reading internal links -->
         <nav aria-label="Further reading" class="mt-6">
           <ul class="list-disc list-inside text-slate-300 space-y-1">
             <li><a class="underline focus-ring" href="/endings/">All endings (spoiler version)</a></li>
@@ -404,7 +411,12 @@
   <!-- Footer -->
   <footer class="border-t border-white/10">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-wrap items-center justify-between gap-4">
-      <p class="text-slate-300">© <span id="year"></span> Human Expenditure Program</p>
+      <!-- Updated: show logo + copyright -->
+      <div class="flex items-center gap-3">
+        <img src="/images/logo-512.png" width="32" height="32" alt="Human Expenditure Program logo"
+             class="rounded-md ring-1 ring-white/15 bg-black/20">
+        <p class="text-slate-300">© <span id="year"></span> Human Expenditure Program</p>
+      </div>
       <div class="flex items-center gap-4">
         <a class="underline focus-ring" href="/privacy.html" aria-label="Privacy Policy link">Privacy</a>
         <a class="underline focus-ring" href="/terms.html" aria-label="Terms of Use link">Terms</a>
