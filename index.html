@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Play Human Expenditure Program Online — Browser Game with Multiple Endings</title>
   <meta name="description" content="Play Human Expenditure Program online in your browser — a horror-tinged simulation with choices and multiple endings. Free to try, no downloads required.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://humanexpenditureprogram.net">
 
   <!-- Open Graph -->
@@ -16,6 +17,8 @@
   <meta property="og:image" content="https://humanexpenditureprogram.net/images/cover-1920x1080.webp">
   <meta property="og:image:width" content="1920">
   <meta property="og:image:height" content="1080">
+  <meta property="og:image:alt" content="Human Expenditure Program — cover artwork">
+  <meta property="og:locale" content="en_US">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
@@ -27,13 +30,14 @@
   <!-- Theme / Icons -->
   <meta name="theme-color" content="#0b0f19">
   <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/images/logo-512.png" sizes="512x512">
 
   <!-- Preconnect: iframe host -->
   <link rel="preconnect" href="https://humanexpenditureprogram.io" crossorigin>
   <!-- Preload hero image for better LCP (self-hosted) -->
   <link rel="preload" as="image" href="/images/cover-1920x1080.avif">
 
-  <!-- Tailwind CSS (CDN). For best performance in production, consider precompiled CSS. -->
+  <!-- Tailwind CSS (CDN). Tip: switch to precompiled /assets/tailwind.css in prod for best INP. -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
@@ -49,6 +53,13 @@
     .fs-btn:hover { background:#ffffff; }
     .fs-icon { width:22px; height:22px; }
     .hidden { display:none; }
+
+    /* Ad placeholder to prevent CLS */
+    .ad-slot{min-height:280px; display:block}
+    @media(min-width:768px){.ad-slot{min-height:250px}}
+
+    /* Optional: slightly brighter body text on dark bg for a11y slack */
+    /* .text-slate-300{color:#cbd5e1} */
   </style>
 
   <!-- ANALYTICS_SNIPPET: Add your analytics script here -->
@@ -98,8 +109,8 @@
         <!-- Game image (self-hosted) -->
         <div class="rounded-2xl overflow-hidden ring-1 ring-white/10 aspect-[16/10]">
           <picture>
-            <source type="image/avif" srcset="/images/cover-1920x1080.avif">
-            <source type="image/webp" srcset="/images/cover-1920x1080.webp">
+            <source type="image/avif" srcset="/images/cover-1920x1080.avif" sizes="(min-width:1024px) 50vw, 100vw">
+            <source type="image/webp" srcset="/images/cover-1920x1080.webp" sizes="(min-width:1024px) 50vw, 100vw">
             <img
               src="/images/cover-1280x720.jpg"
               width="1920" height="1080"
@@ -124,8 +135,8 @@
 
           <!-- Poster image (self-hosted; shown before iframe loads) -->
           <picture id="poster" class="absolute inset-0 w-full h-full">
-            <source type="image/avif" srcset="/images/cover-1920x1080.avif">
-            <source type="image/webp" srcset="/images/cover-1920x1080.webp">
+            <source type="image/avif" srcset="/images/cover-1920x1080.avif" sizes="100vw">
+            <source type="image/webp" srcset="/images/cover-1920x1080.webp" sizes="100vw">
             <img
               src="/images/cover-1280x720.jpg"
               width="1920" height="1080"
@@ -135,8 +146,14 @@
 
           <!-- Click-to-load overlay -->
           <button id="load-iframe"
-                  class="absolute inset-0 w-full h-full grid place-items-center bg-black/50 text-white cursor-pointer focus-ring">
-            <span class="px-5 py-3 rounded-lg bg-emerald-500 text-black font-semibold min-h-[44px]">Click to Play</span>
+                  class="absolute inset-0 w-full h-full grid place-items-center bg-black/50 text-white cursor-pointer focus-ring"
+                  aria-busy="false" aria-controls="game-iframe">
+            <span class="px-5 py-3 rounded-lg bg-emerald-500 text-black font-semibold min-h-[44px] inline-flex items-center gap-2">
+              <svg id="spin" class="hidden animate-spin" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none" stroke-dasharray="60" stroke-linecap="round"/>
+              </svg>
+              Click to Play
+            </span>
           </button>
 
           <!-- Controls: Fullscreen + Fallback link -->
@@ -267,11 +284,21 @@
             <li>When in doubt, try the opposite of what “feels safe.”</li>
           </ul>
         </div>
+
+        <!-- Further reading internal links (land later pages here) -->
+        <nav aria-label="Further reading" class="mt-6">
+          <ul class="list-disc list-inside text-slate-300 space-y-1">
+            <li><a class="underline focus-ring" href="/endings/">All endings (spoiler version)</a></li>
+            <li><a class="underline focus-ring" href="/fullscreen/">How to fullscreen & performance tips</a></li>
+            <li><a class="underline focus-ring" href="/guide/">Beginner’s quick guide</a></li>
+          </ul>
+        </nav>
       </div>
     </section>
 
     <!-- ADSENSE_SLOT_1: below-the-fold placement -->
     <section class="py-6" aria-label="Sponsored">
+      <div class="ad-slot" aria-hidden="true"></div>
       <!-- Google AdSense code here -->
     </section>
 
@@ -335,6 +362,7 @@
 
     <!-- ADSENSE_SLOT_2: after FAQ -->
     <section class="py-6" aria-label="Sponsored">
+      <div class="ad-slot" aria-hidden="true"></div>
       <!-- Google AdSense code here -->
     </section>
 
@@ -385,7 +413,7 @@
     </div>
   </footer>
 
-  <!-- JSON-LD: Organization -->
+  <!-- JSON-LD: Organization (with logo) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -393,6 +421,12 @@
     "name": "Human Expenditure Program",
     "url": "https://humanexpenditureprogram.net",
     "email": "qsyhxw@gmail.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://humanexpenditureprogram.net/images/logo-512.png",
+      "width": 512,
+      "height": 512
+    },
     "sameAs": [
       "https://shroomychrist-studios.itch.io/human-expenditure-program",
       "https://humanexpenditureprogram.io/"
@@ -421,7 +455,7 @@
   }
   </script>
 
-  <!-- JSON-LD: FAQPage (MUST MATCH VISIBLE TEXT EXACTLY) -->
+  <!-- JSON-LD: FAQPage (must match visible text exactly) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -461,7 +495,7 @@
   }
   </script>
 
-  <!-- Minimal JS: lazy-insert iframe on click; fullscreen; warm-up; year -->
+  <!-- Minimal JS: lazy-insert iframe on click; fullscreen; warm-up; a11y; year -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const y = document.getElementById('year');
@@ -477,7 +511,12 @@
 
       function loadIframe() {
         if (!container || container.querySelector('iframe')) return;
+        // Loading state
+        btn?.setAttribute('aria-busy','true');
+        document.getElementById('spin')?.classList.remove('hidden');
+
         const iframe = document.createElement('iframe');
+        iframe.id = 'game-iframe';
         iframe.src = SRC;
         iframe.title = 'Human Expenditure Program game';
         iframe.loading = 'lazy';
@@ -489,11 +528,11 @@
         container.appendChild(iframe);
 
         // Remove overlay and poster after loading
-        if (btn) btn.remove();
+        btn?.remove();
         const poster = document.getElementById('poster');
-        if (poster) poster.remove();
+        poster?.remove();
       }
-      if (btn) btn.addEventListener('click', loadIframe);
+      btn?.addEventListener('click', loadIframe);
 
       // Fullscreen toggle
       function toggleFullscreen() {
@@ -514,7 +553,13 @@
       }
       fsBtn?.addEventListener('click', toggleFullscreen);
       container?.addEventListener('dblclick', toggleFullscreen);
-      document.addEventListener('keydown', (e) => { if (e.key.toLowerCase() === 'f') toggleFullscreen(); });
+      document.addEventListener('keydown', (e) => {
+        const k = e.key.toLowerCase();
+        if (k === 'f') toggleFullscreen();
+        if (k === 'escape' && document.fullscreenElement) {
+          (document.exitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen)?.call(document);
+        }
+      });
       document.addEventListener('fullscreenchange', syncFsState);
       syncFsState();
 
