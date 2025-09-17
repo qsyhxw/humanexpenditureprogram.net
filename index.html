@@ -67,8 +67,7 @@
 
   <!-- ANALYTICS_SNIPPET -->
   <!-- ADSENSE_SNIPPET -->
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8830315294299920"
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8830315294299920"
      crossorigin="anonymous"></script>
   
 </head>
@@ -80,7 +79,7 @@
   <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-black/40 bg-black/60 border-b border-white/10">
     <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
       <!-- Brand with inline logo -->
-      <a href="#" aria-current="page" class="focus-ring flex items-center gap-2">
+      <a href="/" aria-current="page" class="focus-ring flex items-center gap-2">
         <img src="/images/logo-512.png" width="28" height="28" alt="Human Expenditure Program logo"
              class="rounded-md ring-1 ring-white/15 bg-black/20">
         <span class="font-semibold tracking-wide">Human Expenditure Program</span>
@@ -92,6 +91,7 @@
         <li><a class="focus-ring hover:underline" href="#endings" aria-label="Jump to Endings and Choices section">Endings</a></li>
         <li><a class="focus-ring hover:underline" href="#faq" aria-label="Jump to FAQ section">FAQ</a></li>
         <li><a class="focus-ring hover:underline" href="#about" aria-label="Jump to About and Contact section">About</a></li>
+        <li><a class="focus-ring hover:underline" href="/download/" aria-label="Go to official download links">Download</a></li>
       </ul>
     </nav>
   </header>
@@ -121,8 +121,8 @@
         <!-- Game image (self-hosted) -->
         <div class="rounded-2xl overflow-hidden ring-1 ring-white/10 aspect-[16/10]">
           <picture>
-            <source 输入="image/avif" srcset="/images/cover-1920x1080.avif" sizes="(min-width:1024px) 50vw, 100vw">
-            <source 输入="image/webp" srcset="/images/cover-1920x1080.webp" sizes="(min-width:1024px) 50vw, 100vw">
+            <source type="image/avif" srcset="/images/cover-1920x1080.avif" sizes="(min-width:1024px) 50vw, 100vw">
+            <source type="image/webp" srcset="/images/cover-1920x1080.webp" sizes="(min-width:1024px) 50vw, 100vw">
             <img
               src="/images/cover-1280x720.jpg"
               width="1920" height="1080"
@@ -147,12 +147,13 @@
 
           <!-- Poster image (self-hosted; shown before iframe loads) -->
           <picture id="poster" class="absolute inset-0 w-full h-full">
-            <source 输入="image/avif" srcset="/images/cover-1920x1080.avif" sizes="100vw">
-            <source 输入="image/webp" srcset="/images/cover-1920x1080.webp" sizes="100vw">
+            <source type="image/avif" srcset="/images/cover-1920x1080.avif" sizes="100vw">
+            <source type="image/webp" srcset="/images/cover-1920x1080.webp" sizes="100vw">
             <img
               src="/images/cover-1280x720.jpg"
               width="1920" height="1080"
               alt="Human Expenditure Program gameplay poster"
+              fetchpriority="low" importance="low"
               class="w-full h-full object-cover select-none pointer-events-none">
           </picture>
 
@@ -231,8 +232,8 @@
         <article class="mt-6 p-5 rounded-xl bg-white/5 ring-1 ring-white/10">
           <h3 class="font-semibold">New player route (first 2–3 runs)</h3>
           <p class="mt-2 text-slate-300">
-            Treat early runs as scouting. Keep the system stable, read prompts carefully, and avoid extreme actions.
-            Aim for a “compliance-leaning” outcome first so you learn timing windows, failure thresholds, and what the game considers risky.
+            Treat early runs as scouting. Keep the system stable, read prompts carefully, 和 avoid extreme actions.
+            Aim for a “compliance-leaning” outcome first so you learn timing windows, failure thresholds, 和 what the game considers risky.
           </p>
           <ul class="mt-2 list-disc list-inside text-slate-300 space-y-1">
             <li>Stabilize basics before pushing boundaries.</li>
@@ -271,7 +272,7 @@
           <article class="p-5 rounded-xl bg-white/5 ring-1 ring-white/10">
             <h3 class="font-semibold">3) Optimization Ending</h3>
             <p class="mt-2 text-slate-300">
-              Master the resource loop: thresholds, sequencing, and tiny efficiencies.
+              Master the resource loop: thresholds, sequencing, 和 tiny efficiencies.
               Done right, you can stabilize while still unlocking optional scenes—a nuanced “win” that rewards planning rather than obedience.
             </p>
             <ul class="mt-2 list-disc list-inside text-slate-300 space-y-1">
@@ -332,7 +333,7 @@
         <!-- Accessibility & Difficulty / Spoiler policy -->
         <div class="mt-6 grid md:grid-cols-2 gap-6">
           <article class="p-5 rounded-xl bg-white/5 ring-1 ring-white/10">
-            <h3 class="font-semibold">无障碍 &amp; difficulty</h3>
+            <h3 class="font-semibold">Accessibility &amp; difficulty</h3>
             <p class="mt-2 text-slate-300">
               The browser build supports keyboard navigation and fullscreen. If text feels small, use fullscreen or page zoom.
               There is no hard timer you cannot out-plan; treat it like a resource puzzle.
@@ -354,7 +355,7 @@
             <li>Map cause → effect across two cycles, not just one.</li>
             <li>When in doubt, try the deliberate opposite of a “safe” decision.</li>
           </ul>
-          <p class="mt-3 text-xs text-slate-400">Last reviewed: <time datetime="2025-09-17">2025年9月17日</time></p>
+          <p class="mt-3 text-xs text-slate-400">Last reviewed: <time datetime="2025-09-17">Sep 17, 2025</time></p>
         </div>
 
         <!-- Further reading -->
@@ -363,6 +364,7 @@
             <li><a class="underline focus-ring" href="/endings/">All endings (spoiler version)</a></li>
             <li><a class="underline focus-ring" href="/fullscreen/">How to fullscreen &amp; performance tips</a></li>
             <li><a class="underline focus-ring" href="/guide/">Beginner’s quick guide</a></li>
+            <li><a class="underline focus-ring" href="/download/">Download (official links)</a></li>
           </ul>
         </nav>
       </div>
@@ -480,12 +482,12 @@
         <div class="mt-6 p-5 rounded-xl bg-white/5 ring-1 ring-white/10">
           <h3 class="font-semibold">Changelog</h3>
           <ul class="mt-2 list-disc list-inside text-slate-300 space-y-1">
-            <li><time datetime="2025-09-17">2025-09-17</time> — Added fullscreen controls, long FAQ/JSON-LD, expanded Endings guide, brand logo, and PWA manifest.</li>
+            <li><time datetime="2025-09-17">2025-09-17</time> — Added fullscreen controls, long FAQ/JSON-LD, expanded Endings guide, brand logo, PWA manifest, 和 Download page.</li>
           </ul>
         </div>
 
         <p class="mt-6 text-xs text-slate-400">Rated 13+. Non-commercial fan site.</p>
-        <p class="text-xs text-slate-500 mt-2">Last updated: <time datetime="2025-09-17">Sep 17, 2025</time></p>
+        <p class="text-xs text-slate-500 mt-2">Last updated: <time datetime="2025-09-17">2025年9月17日</time></p>
       </div>
     </section>
   </main>
@@ -508,46 +510,52 @@
       </div>
       <div class="flex items-center gap-4">
         <a class="underline focus-ring" href="/privacy.html" aria-label="Privacy Policy link">Privacy</a>
-        <a class="underline focus-ring" href="/terms.html" aria-label="Terms of Use link">服务条款</a>
+        <a class="underline focus-ring" href="/terms.html" aria-label="Terms of Use link">Terms</a>
         <a href="#play" class="focus-ring inline-flex items-center justify-center px-4 py-2 rounded-lg bg-emerald-500 text-black font-semibold min-h-[44px]">Play now</a>
       </div>
     </div>
   </footer>
 
   <!-- JSON-LD: Organization (with logo) -->
-  <script 输入="application/ld+json">
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization"，
-    "name": "Human Expenditure Program"，
-    "url": "https://humanexpenditureprogram.net"，
-    "email": "qsyhxw@gmail.com"，
+    "@type": "Organization",
+    "name": "Human Expenditure Program",
+    "url": "https://humanexpenditureprogram.net",
+    "email": "qsyhxw@gmail.com",
     "logo": {
-      "@type": "ImageObject"，
-      "url": "https://humanexpenditureprogram.net/images/logo-512.png"，
-      "width": 512，
+      "@type": "ImageObject",
+      "url": "https://humanexpenditureprogram.net/images/logo-512.png",
+      "width": 512,
       "height": 512
     },
     "sameAs": [
       "https://shroomychrist-studios.itch.io/human-expenditure-program",
       "https://humanexpenditureprogram.io/"
-    ]
+    ],
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "editorial",
+      "email": "qsyhxw@gmail.com",
+      "availableLanguage": ["en","zh-CN"]
+    }]
   }
   </script>
 
   <!-- JSON-LD: VideoGame -->
-  <script 输入="application/ld+json">
+  <script type="application/ld+json">
   {
-    "@context": "https://schema.org"，
-    "@type": "VideoGame"，
-    "name": "Human Expenditure Program"，
-    "url": "https://humanexpenditureprogram.net"，
-    "inLanguage": "en-US"，
-    "genre": ["Horror"， "Simulation"， "Browser game"]，
-    "applicationCategory": "Game"，
-    "operatingSystem": "Web"，
-    "isAccessibleForFree": true，
-    "author": { "@type": "Person"， "name": "SHROOMYCHRIST" }，
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Human Expenditure Program",
+    "url": "https://humanexpenditureprogram.net",
+    "inLanguage": "en-US",
+    "genre": ["Horror", "Simulation", "Browser game"],
+    "applicationCategory": "Game",
+    "operatingSystem": "Web",
+    "isAccessibleForFree": true,
+    "author": { "@type": "Person", "name": "SHROOMYCHRIST" },
     "sameAs": [
       "https://shroomychrist-studios.itch.io/human-expenditure-program",
       "https://humanexpenditureprogram.io/"
@@ -557,27 +565,27 @@
   </script>
 
   <!-- JSON-LD: FAQPage (must match visible text exactly) -->
-  <script 输入="application/ld+json">
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage"，
+    "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question"， "name": "What type of game is this?", "acceptedAnswer": { "@type": "Answer", "text": "A horror-tinged browser simulation about choices and consequences." } },
-      { "@type": "Question"， "name": "Can I play it for free?"， "acceptedAnswer": { "@type": "Answer"， "text": "Yes. You can play in your browser with no downloads." } }，
+      { "@type": "Question", "name": "What type of game is this?", "acceptedAnswer": { "@type": "Answer", "text": "A horror-tinged browser simulation about choices and consequences." } },
+      { "@type": "Question", "name": "Can I play it for free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can play in your browser with no downloads." } },
       { "@type": "Question", "name": "Does it have multiple endings?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Your choices lead to different endings." } },
       { "@type": "Question", "name": "Is there an official download?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Visit the official itch.io page for downloads." } },
-      { "@type": "Question"， "name": "Who created the game?"， "acceptedAnswer": { "@type": "Answer", "text": "SHROOMYCHRIST is the original creator." } },
-      { "@type": "Question"， "name": "Does it save progress?"， "acceptedAnswer": { "@type": "Answer", "text": "The web version is designed for short sessions; progress may not persist between reloads." } },
-      { "@type": "Question"， "name": "How do I enter fullscreen?"， "acceptedAnswer": { "@type": "Answer"， "text": "Click the fullscreen button, double-click the player, or press F." } }，
+      { "@type": "Question", "name": "Who created the game?", "acceptedAnswer": { "@type": "Answer", "text": "SHROOMYCHRIST is the original creator." } },
+      { "@type": "Question", "name": "Does it save progress?", "acceptedAnswer": { "@type": "Answer", "text": "The web version is designed for short sessions; progress may not persist between reloads." } },
+      { "@type": "Question", "name": "How do I enter fullscreen?", "acceptedAnswer": { "@type": "Answer", "text": "Click the fullscreen button, double-click the player, or press F." } },
       { "@type": "Question", "name": "Does it work on mobile?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. It runs in modern mobile browsers; rotate to landscape for the best view." } },
       { "@type": "Question", "name": "Is it safe and legal to play here?", "acceptedAnswer": { "@type": "Answer", "text": "This is a non-commercial fan site that links to trusted sources." } },
-      { "@type": "Question"， "name": "Why is the game not full screen by default?"， "acceptedAnswer": { "@type": "Answer", "text": "To keep pages fast and stable; click fullscreen for an immersive view." } }
+      { "@type": "Question", "name": "Why is the game not full screen by default?", "acceptedAnswer": { "@type": "Answer", "text": "To keep pages fast and stable; click fullscreen for an immersive view." } }
     ]
   }
   </script>
 
   <!-- JSON-LD: WebPage (E-E-A-T enhanced) -->
-  <script 输入="application/ld+json">
+  <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"WebPage",
@@ -599,7 +607,22 @@
   }
   </script>
 
-  <!-- Minimal JS: lazy-insert iframe on click; fullscreen; warm-up; a11y; year -->
+  <!-- JSON-LD: BreadcrumbList (Home + all child pages incl. Download) -->
+  <script type="application/ld+json">
+  {
+   "@context":"https://schema.org",
+   "@type":"BreadcrumbList",
+   "itemListElement":[
+     {"@type":"ListItem","position":1,"name":"Home","item":"https://humanexpenditureprogram.net/"},
+     {"@type":"ListItem","position":2,"name":"Fullscreen","item":"https://humanexpenditureprogram.net/fullscreen/"},
+     {"@type":"ListItem","position":3,"name":"Endings","item":"https://humanexpenditureprogram.net/endings/"},
+     {"@type":"ListItem","position":4,"name":"Guide","item":"https://humanexpenditureprogram.net/guide/"},
+     {"@type":"ListItem","position":5,"name":"Download","item":"https://humanexpenditureprogram.net/download/"}
+   ]
+  }
+  </script>
+
+  <!-- Minimal JS: lazy-insert iframe on click; fullscreen; warm-up; a11y; year; GA4 events -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const y = document.getElementById('year');
@@ -636,53 +659,57 @@
         const poster = document.getElementById('poster');
         poster?.remove();
       }
-      btn?.addEventListener('click', loadIframe);
+      btn?.addEventListener('click'， loadIframe);
 
       // Fullscreen toggle
       function toggleFullscreen() {
-        const target = container.querySelector('iframe') || container; // prefer iframe
-        if (!document.fullscreenElement) {
-          const req = target.requestFullscreen || target.webkitRequestFullscreen || target.msRequestFullscreen;
-          if (req) req.call(target, { navigationUI: 'hide' });
+        const target = container。querySelector('iframe') || container; // prefer iframe
+        if (!document。fullscreenElement) {
+          const req = target。requestFullscreen || target。webkitRequestFullscreen || target。msRequestFullscreen;
+          if (req) req。call(target， { navigationUI: 'hide' });
         } else {
-          const ex = document.exitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen;
+          const ex = document。exitFullscreen || document。webkitExitFullscreen || document。msExitFullscreen;
           if (ex) ex.call(document);
         }
       }
       function syncFsState() {
-        const inFs = !!document.fullscreenElement;
-        fsBtn?.setAttribute('aria-pressed', inFs ? 'true' : 'false');
+        const inFs = !!document。fullscreenElement;
+        fsBtn?.setAttribute('aria-pressed'， inFs ? 'true' : 'false');
         iconEnter?.classList.toggle('hidden', inFs);
-        iconExit?.classList.toggle('hidden', !inFs);
+        iconExit?.classList。toggle('hidden', !inFs);
       }
-      fsBtn?.addEventListener('click', toggleFullscreen);
-      container?.addEventListener('dblclick', toggleFullscreen);
-      document.addEventListener('keydown', (e) => {
-        const k = e.key.toLowerCase();
+      fsBtn?.addEventListener('click'， toggleFullscreen);
+      container?.addEventListener('dblclick'， toggleFullscreen);
+      document.addEventListener('keydown'， (e) => {
+        const k = e。key。toLowerCase();
         if (k === 'f') toggleFullscreen();
         if (k === 'escape' && document.fullscreenElement) {
-          (document.exitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen)?.call(document);
+          (document。exitFullscreen || document。webkitExitFullscreen || document。msExitFullscreen)?.call(document);
         }
       });
-      document.addEventListener('fullscreenchange', syncFsState);
+      document.addEventListener('fullscreenchange'， syncFsState);
       syncFsState();
 
       // Warm-up preconnect on interaction (improves first play)
-      const warmTargets = ["https://humanexpenditureprogram.io", "https://humanexpenditureprogram.net"];
+      const warmTargets = ["https://humanexpenditureprogram.io"， "https://humanexpenditureprogram.net"];
       function addPreconnect(href){
-        if (document.querySelector(`link[rel="preconnect"][href="${href}"]`)) return;
-        const l = document.createElement('link');
-        l.rel = 'preconnect'; l.href = href; l.crossOrigin = 'anonymous';
+        if (document。querySelector(`link[rel="preconnect"][href="${href}"]`)) return;
+        const l = document。createElement('link');
+        l.rel = 'preconnect'; l.href = href; l。crossOrigin = 'anonymous';
         document.head.appendChild(l);
       }
-      ['load-iframe','fs-btn','player-container'].forEach(id=>{
-        const el = document.getElementById(id);
-        ['pointerenter','touchstart'].forEach(evt=>{
-          el?.addEventListener(evt, ()=> warmTargets.forEach(addPreconnect), { once:true, passive:true });
+      ['load-iframe'，'fs-btn'，'player-container']。forEach(id=>{
+        const el = document。getElementById(id);
+        ['pointerenter'，'touchstart']。forEach(evt=>{
+          el?.addEventListener(evt， ()=> warmTargets.forEach(addPreconnect)， { once:true, passive:true });
         });
+      });
+
+      // GA4: track navigation to /download/
+      document.querySelectorAll('a[href="/download/"]')。forEach(a=>{
+        a.addEventListener('click'， ()=> window.gtag && gtag('event','hep_nav_download'));
       });
     });
   </script>
 </body>
 </html>
-
