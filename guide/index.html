@@ -7,14 +7,10 @@
   <meta name="description" content="A spoiler-light beginner’s guide: core loop, first runs, common mistakes, accessibility, and tips for Human Expenditure Program." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://humanexpenditureprogram.net/guide/" />
-
-  <!-- Icons -->
   <link rel="icon" href="/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/images/logo-512.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/images/logo-512.png" />
   <link rel="manifest" href="/site.webmanifest" />
-
-  <!-- Social -->
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Human Expenditure Program" />
   <meta property="og:title" content="Beginner’s Guide to Human Expenditure Program" />
@@ -26,22 +22,12 @@
   <meta property="og:image:alt" content="Human Expenditure Program — cover artwork" />
   <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <style>
-    .focus-ring:focus-visible { outline:2px solid #10b981; outline-offset:2px; }
-    .ad-slot{min-height:280px; display:block}
-    @media(min-width:768px){.ad-slot{min-height:250px}}
-  </style>
-
-  <!-- ANALYTICS_SNIPPET -->
-  <!-- ADSENSE_SNIPPET -->
+  <style>.focus-ring:focus-visible{outline:2px solid #10b981;outline-offset:2px}.ad-slot{min-height:280px;display:block}@media(min-width:768px){.ad-slot{min-height:250px}}</style>
+  <!-- ANALYTICS_SNIPPET --><!-- ADSENSE_SNIPPET -->
 </head>
 <body class="bg-[#0b0f19] text-white antialiased">
   <a href="#main" class="sr-only focus:not-sr-only focus-ring absolute left-2 top-2 z-50 bg-emerald-600 text-white px-3 py-2 rounded">Skip to content</a>
-
   <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-black/40 bg-black/60 border-b border-white/10">
     <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
       <a href="/" class="focus-ring flex items-center gap-2" aria-label="Go to home">
@@ -52,6 +38,7 @@
         <li><a class="focus-ring hover:underline" href="/#play">Play</a></li>
         <li><a class="focus-ring hover:underline" href="/fullscreen/">Fullscreen</a></li>
         <li><a class="focus-ring hover:underline" href="/endings/">Endings</a></li>
+        <li><a class="focus-ring hover:underline" href="/download/" aria-label="Go to official download links">Download</a></li>
       </ul>
     </nav>
   </header>
@@ -62,7 +49,6 @@
         <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Beginner’s Guide (Spoiler-Light)</h1>
         <p class="mt-4 text-lg text-slate-200">Understand the core loop and make intentional choices. Use this as a companion for your first runs.</p>
 
-        <!-- Ad slot -->
         <section class="py-6" aria-label="Sponsored"><div class="ad-slot" aria-hidden="true"></div></section>
 
         <article class="p-5 rounded-xl bg-white/5 ring-1 ring-white/10">
@@ -103,7 +89,6 @@
           </ul>
         </article>
 
-        <!-- FAQ -->
         <section class="py-10">
           <h2 class="text-2xl md:text-3xl font-bold">FAQ</h2>
           <div class="mt-6 grid md:grid-cols-2 gap-6">
@@ -126,18 +111,17 @@
           </div>
         </section>
 
-        <!-- Further reading -->
         <nav aria-label="Further reading" class="mt-2">
           <ul class="list-disc list-inside text-slate-300 space-y-1">
             <li><a class="underline focus-ring" href="/#endings">Endings overview (spoiler-light)</a></li>
             <li><a class="underline focus-ring" href="/endings/">All endings (full spoilers)</a></li>
             <li><a class="underline focus-ring" href="/fullscreen/">How to fullscreen</a></li>
+            <li><a class="underline focus-ring" href="/download/">Download (official links)</a></li>
           </ul>
         </nav>
       </div>
     </section>
 
-    <!-- Ad slot -->
     <section class="py-6" aria-label="Sponsored"><div class="ad-slot" aria-hidden="true"></div></section>
   </main>
 
@@ -156,47 +140,14 @@
   </footer>
 
   <!-- JSON-LD: BreadcrumbList -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://humanexpenditureprogram.net/"},
-      {"@type":"ListItem","position":2,"name":"Guide","item":"https://humanexpenditureprogram.net/guide/"}
-    ]
-  }
-  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://humanexpenditureprogram.net/"},{"@type":"ListItem","position":2,"name":"Guide","item":"https://humanexpenditureprogram.net/guide/"}]}</script>
 
-  <!-- JSON-LD: FAQPage (texts MUST match) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"Is it free to play?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can play in your browser with no downloads."}},
-      {"@type":"Question","name":"Does it save progress?","acceptedAnswer":{"@type":"Answer","text":"The web version is designed for short sessions; progress may not persist between reloads."}},
-      {"@type":"Question","name":"Is there a best first route?","acceptedAnswer":{"@type":"Answer","text":"Start compliance-leaning to learn systems, then try a defiance route."}},
-      {"@type":"Question","name":"How long is a run?","acceptedAnswer":{"@type":"Answer","text":"Short sessions are common; treat early attempts as scouting."}}
-    ]
-  }
-  </script>
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is it free to play?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can play in your browser with no downloads."}},{"@type":"Question","name":"Does it save progress?","acceptedAnswer":{"@type":"Answer","text":"The web version is designed for short sessions; progress may not persist between reloads."}},{"@type":"Question","name":"Is there a best first route?","acceptedAnswer":{"@type":"Answer","text":"Start compliance-leaning to learn systems, then try a defiance route."}},{"@type":"Question","name":"How long is a run?","acceptedAnswer":{"@type":"Answer","text":"Short sessions are common; treat early attempts as scouting."}}]}</script>
 
   <!-- JSON-LD: Article -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Article",
-    "headline":"Beginner’s Guide to Human Expenditure Program (Spoiler-Light)",
-    "author":{"@type":"Organization","name":"Human Expenditure Program"},
-    "datePublished":"2025-09-17",
-    "dateModified":"2025-09-17",
-    "inLanguage":"en-US",
-    "image":"https://humanexpenditureprogram.net/images/cover-1920x1080.webp",
-    "mainEntityOfPage":{"@type":"WebPage","@id":"https://humanexpenditureprogram.net/guide/"},
-    "publisher":{"@type":"Organization","name":"Human Expenditure Program"}
-  }
-  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Beginner’s Guide to Human Expenditure Program (Spoiler-Light)","author":{"@type":"Organization","name":"Human Expenditure Program"},"datePublished":"2025-09-17","dateModified":"2025-09-17","inLanguage":"en-US","image":"https://humanexpenditureprogram.net/images/cover-1920x1080.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://humanexpenditureprogram.net/guide/"},"publisher":{"@type":"Organization","name":"Human Expenditure Program"}}</script>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
