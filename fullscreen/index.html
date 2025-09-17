@@ -7,14 +7,10 @@
   <meta name="description" content="Use the fullscreen button, double-click, or press F to play Human Expenditure Program in fullscreen. Performance tips included." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://humanexpenditureprogram.net/fullscreen/" />
-
-  <!-- Icons / PWA -->
   <link rel="icon" href="/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/images/logo-512.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/images/logo-512.png" />
   <link rel="manifest" href="/site.webmanifest" />
-
-  <!-- Social -->
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Human Expenditure Program" />
   <meta property="og:title" content="How to Play Human Expenditure Program in Fullscreen" />
@@ -26,28 +22,13 @@
   <meta property="og:image:alt" content="Human Expenditure Program — cover artwork" />
   <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="How to Play Human Expenditure Program in Fullscreen" />
-  <meta name="twitter:description" content="Click the fullscreen button, double-click, or press F." />
-  <meta name="twitter:image" content="https://humanexpenditureprogram.net/images/cover-1920x1080.webp" />
-
-  <!-- Preload/Preconnect (optional warm-up to game host) -->
   <link rel="preconnect" href="https://humanexpenditureprogram.io" crossorigin />
-
-  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <style>
-    .focus-ring:focus-visible { outline:2px solid #10b981; outline-offset:2px; }
-    .ad-slot{min-height:280px; display:block}
-    @media(min-width:768px){.ad-slot{min-height:250px}}
-  </style>
-
-  <!-- ANALYTICS_SNIPPET -->
-  <!-- ADSENSE_SNIPPET -->
+  <style>.focus-ring:focus-visible{outline:2px solid #10b981;outline-offset:2px}.ad-slot{min-height:280px;display:block}@media(min-width:768px){.ad-slot{min-height:250px}}</style>
+  <!-- ANALYTICS_SNIPPET --><!-- ADSENSE_SNIPPET -->
 </head>
 <body class="bg-[#0b0f19] text-white antialiased">
   <a href="#main" class="sr-only focus:not-sr-only focus-ring absolute left-2 top-2 z-50 bg-emerald-600 text-white px-3 py-2 rounded">Skip to content</a>
-
   <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-black/40 bg-black/60 border-b border-white/10">
     <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
       <a href="/" class="focus-ring flex items-center gap-2" aria-label="Go to home">
@@ -59,6 +40,7 @@
         <li><a class="focus-ring hover:underline" href="/#features">Features</a></li>
         <li><a class="focus-ring hover:underline" href="/endings/">Endings</a></li>
         <li><a class="focus-ring hover:underline" href="/guide/">Guide</a></li>
+        <li><a class="focus-ring hover:underline" href="/download/" aria-label="Go to official download links">Download</a></li>
       </ul>
     </nav>
   </header>
@@ -84,10 +66,8 @@
       </div>
     </section>
 
-    <!-- Ad slot (below the fold) -->
     <section class="py-6" aria-label="Sponsored"><div class="ad-slot" aria-hidden="true"></div></section>
 
-    <!-- HowTo Steps (visible text MUST match JSON-LD) -->
     <section class="py-10 bg-[#0a0e17]">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-2xl md:text-3xl font-bold">Fullscreen methods (3 ways)</h2>
@@ -118,7 +98,6 @@
       </div>
     </section>
 
-    <!-- FAQ (texts must match JSON-LD) -->
     <section class="py-12">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-2xl md:text-3xl font-bold">FAQ</h2>
@@ -143,7 +122,6 @@
       </div>
     </section>
 
-    <!-- Ad slot (end of content) -->
     <section class="py-6" aria-label="Sponsored"><div class="ad-slot" aria-hidden="true"></div></section>
   </main>
 
@@ -162,68 +140,17 @@
   </footer>
 
   <!-- JSON-LD: BreadcrumbList -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://humanexpenditureprogram.net/"},
-      {"@type":"ListItem","position":2,"name":"Fullscreen","item":"https://humanexpenditureprogram.net/fullscreen/"}
-    ]
-  }
-  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://humanexpenditureprogram.net/"},{"@type":"ListItem","position":2,"name":"Fullscreen","item":"https://humanexpenditureprogram.net/fullscreen/"}]}</script>
 
-  <!-- JSON-LD: HowTo (steps MUST match visible text) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"HowTo",
-    "name":"How to play Human Expenditure Program in fullscreen",
-    "step":[
-      {"@type":"HowToStep","text":"Click the fullscreen button in the player controls."},
-      {"@type":"HowToStep","text":"Double-click the player area."},
-      {"@type":"HowToStep","text":"Press F on your keyboard; press Esc to exit."}
-    ],
-    "tool":[{"@type":"HowToTool","name":"Modern web browser"}],
-    "totalTime":"PT1M",
-    "supply":[{"@type":"HowToSupply","name":"Human Expenditure Program web build"}],
-    "image":"https://humanexpenditureprogram.net/images/cover-1920x1080.webp"
-  }
-  </script>
+  <!-- JSON-LD: HowTo -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to play Human Expenditure Program in fullscreen","step":[{"@type":"HowToStep","text":"Click the fullscreen button in the player controls."},{"@type":"HowToStep","text":"Double-click the player area."},{"@type":"HowToStep","text":"Press F on your keyboard; press Esc to exit."}],"tool":[{"@type":"HowToTool","name":"Modern web browser"}],"totalTime":"PT1M","supply":[{"@type":"HowToSupply","name":"Human Expenditure Program web build"}],"image":"https://humanexpenditureprogram.net/images/cover-1920x1080.webp"}</script>
 
-  <!-- JSON-LD: FAQPage (texts MUST match) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"How do I enter fullscreen?","acceptedAnswer":{"@type":"Answer","text":"Click the fullscreen button, double-click the player, or press F."}},
-      {"@type":"Question","name":"How do I exit fullscreen?","acceptedAnswer":{"@type":"Answer","text":"Press Esc or click the fullscreen button again."}},
-      {"@type":"Question","name":"Why does the game not start in fullscreen?","acceptedAnswer":{"@type":"Answer","text":"To keep pages fast and stable; click fullscreen when you are ready."}},
-      {"@type":"Question","name":"Does fullscreen improve performance?","acceptedAnswer":{"@type":"Answer","text":"Fullscreen improves readability; performance depends on your device and network."}}
-    ]
-  }
-  </script>
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I enter fullscreen?","acceptedAnswer":{"@type":"Answer","text":"Click the fullscreen button, double-click the player, or press F."}},{"@type":"Question","name":"How do I exit fullscreen?","acceptedAnswer":{"@type":"Answer","text":"Press Esc or click the fullscreen button again."}},{"@type":"Question","name":"Why does the game not start in fullscreen?","acceptedAnswer":{"@type":"Answer","text":"To keep pages fast and stable; click fullscreen when you are ready."}},{"@type":"Question","name":"Does fullscreen improve performance?","acceptedAnswer":{"@type":"Answer","text":"Fullscreen improves readability; performance depends on your device and network."}}]}</script>
 
   <!-- JSON-LD: WebPage -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebPage",
-    "name":"How to Play Human Expenditure Program in Fullscreen",
-    "url":"https://humanexpenditureprogram.net/fullscreen/",
-    "inLanguage":"en-US",
-    "datePublished":"2025-09-17",
-    "dateModified":"2025-09-17",
-    "primaryImageOfPage":{
-      "@type":"ImageObject",
-      "url":"https://humanexpenditureprogram.net/images/cover-1920x1080.webp",
-      "width":1920,"height":1080
-    },
-    "publisher":{"@type":"Organization","name":"Human Expenditure Program"}
-  }
-  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"How to Play Human Expenditure Program in Fullscreen","url":"https://humanexpenditureprogram.net/fullscreen/","inLanguage":"en-US","datePublished":"2025-09-17","dateModified":"2025-09-17","primaryImageOfPage":{"@type":"ImageObject","url":"https://humanexpenditureprogram.net/images/cover-1920x1080.webp","width":1920,"height":1080},"publisher":{"@type":"Organization","name":"Human Expenditure Program"}}</script>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
